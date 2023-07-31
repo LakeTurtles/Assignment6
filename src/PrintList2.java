@@ -28,10 +28,10 @@ public class PrintList2 {
         Optional<Integer> lowSalesNumber = teslaSales.stream().max((o1, o2) -> o2.getSales().compareTo(o1.getSales())).map(date -> date.getSales());
 
         System.out.println("\u001B[34mThe highest sales month for " + modelType +"  was \u001B[35m"
-                + salesNumber.orElse(200) + " in " + highestMonthSales.orElse(new TeslaSales("Jan-17", "0")).getDate());
+                + salesNumber.orElse(200) + "\u001B[34m cars in \u001B[35m" + highestMonthSales.orElse(new TeslaSales("Jan-17", "0")).getDate());
 
         System.out.println("\u001B[34mThe lowest sales month for " + modelType + " was \u001B[35m"
-                + lowSalesNumber.orElse(200) + " in " + lowestMonthSales.orElse(new TeslaSales("Jan-17", "0")).getDate());
+                + lowSalesNumber.orElse(200) + "\u001B[34m cars in \u001B[35m" + lowestMonthSales.orElse(new TeslaSales("Jan-17", "0")).getDate());
 
     }
 }
